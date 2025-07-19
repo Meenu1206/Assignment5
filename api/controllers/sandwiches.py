@@ -4,8 +4,7 @@ from api.models import models, schemas
 
 def create(db: Session, sandwich: schemas.SandwichCreate):
     db_sandwich = models.Sandwich(
-        name=sandwich.name,
-        description=sandwich.description,
+        sandwich_name=sandwich.sandwich_name,
         price=sandwich.price
     )
     db.add(db_sandwich)
